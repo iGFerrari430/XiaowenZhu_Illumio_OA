@@ -2,7 +2,7 @@
 ## Configuration of the project
   I used Java to program this assignment.<br/>
   It could be opened in either eclipse or IntelliJ. The file's directory is src/Firewall.<br/>
-  The method could be invoked using: 
+  The method could be invoked using: <br/>
   <code>
     Firewall wall = new Firewall(inputFile);
     wall.accept_packet(direction,protocal,port,IPadress) // returns a boolean
@@ -19,10 +19,10 @@ Then, I realize that one of the other key could be used to map to other datas, s
 So far, for each direction/protocal entries, and for each possible port, we have got a list of ip address ranges. We could then sort and merge these ip addresses, so that binary search could be used when searching whether ip address is in one of the ranges.
 
 #### step 4: Summary and Furthur thought
-Thus, the final data structure will look like this in Java: 
+Thus, the final data structure will look like this in Java: <br/><br/>
 <code>
   HashMap<String,HashMap<Integer,ArrayList<long[]>>> map
-</code>
+</code> <br/><br/>
 where string represents the protocal/direction pair; integer represents port,
 and ArrayList<long[]> represents the ip address ranges.
 
