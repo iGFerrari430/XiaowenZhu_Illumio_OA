@@ -7,11 +7,11 @@ public class Firewall {
      * compress the direction/protocol to one pair string,
      * map the pair to another hashmap, then match the port to ranges of available IP addresses.
      */
-    public HashMap<String,HashMap<Integer,ArrayList<long[]>>> map = new HashMap<>();
+    private HashMap<String,HashMap<Integer,ArrayList<long[]>>> map = new HashMap<>();
     /**
      * helper function to convert a IP address string to long.
      */
-    public long ip2long(String ip){
+    private long ip2long(String ip){
         String [] nums = ip.split("\\.");
         long multiplier = 1;
         long result = 0;
