@@ -36,3 +36,10 @@ This approach has a significant increase in the use of spaces. If we do not want
   <li> testing the program with 10 million requests. <br/>
     Aiming to test the running time of the program under long input dataset.</li>
 </ol>
+
+#### Result:
+  <ul>
+  <li> The first 4 cases passed with no errors. </li>
+  <li> It took my program roughly 2 seconds to run the fifth test with 10 million 
+      requests.
+  </li>
