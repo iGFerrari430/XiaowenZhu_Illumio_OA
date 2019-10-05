@@ -1,20 +1,6 @@
-import javafx.util.Pair;
-
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.*;
-
-// the value of each key of the hashMap.
-class Info {
-    public long[] ipRange = null;
-    public int[] portRange = null;
-    @Override
-    public String toString(){
-        return null;
-    }
-}
 public class Firewall {
     /**
      * main data member of the Firewall class.
