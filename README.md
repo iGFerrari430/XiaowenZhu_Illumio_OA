@@ -1,7 +1,15 @@
 # XiaowenZhu_Illumio_OA
+## Configuration of the project
+  I used Java to program this assignment.<br/>
+  It could be opened in either eclipse or IntelliJ. The file's directory is src/Firewall.<br/>
+  The method could be invoked using: <br/>
+ ```
+    Firewall wall = new Firewall(inputFile);
+    wall.accept_packet(direction,protocal,port,IPadress) // returns a boolean
+```
 ## My intuitions and Algorithm
 After seeing the problem,I paid special attention to one major requirement: After the input dataset has been loaded, we should be able to deal with subsequent large loads of requests fairly quickly, without major delay.<br/> Scanning through each rule is, obviously, not very ideal. There must be some methods of organizing the data better in expense of the memory. <br/><br/>Thus, my optimization begins here.<br/><br/>
-#### step 1 : dealing with "direction"/"protocal" entires
+#### step 1 : dealing with "direction"/"protocal" entries
 First, I noticed that there are only 4 possibilites of the first 2 entries of one rule,"direction" and "protocal", so we could use a HashMap that maps each possiblity to its associated data. This could, in average, decrease the runtime by 4 times without compensating any space. However, in terms of big O notation of runtime, nothing has changed. The searching time is still O(n).<br/>
 
 #### step 2 : dealing with ports
@@ -11,13 +19,15 @@ Then, I realize that one of the other key could be used to map to other datas, s
 So far, for each direction/protocal entries, and for each possible port, we have got a list of ip address ranges. We could then sort and merge these ip addresses, so that binary search could be used when searching whether ip address is in one of the ranges.
 
 #### step 4: Summary and Furthur thought
-Thus, the final data structure will look like this in Java: 
+Thus, the final data structure will look like this in Java: <br/><br/>
 <code>
   HashMap<String,HashMap<Integer,ArrayList<long[]>>> map
-</code>
+</code> <br/><br/>
 where string represents the protocal/direction pair; integer represents port,
 and ArrayList<long[]> represents the ip address ranges.
-  
+
+This approach could reduce the worst case runtime to <code>O(logn)</code> where n is the number of rules in the database. 
+
 This approach has a significant increase in the use of spaces. If we do not want this trade off,we could truncate step 2 and 3 and linear search all the port/ip pairs associated with it. This way the runtime is moderately reduced without expense of using more space.
 
 ## Testing of my Program
@@ -43,3 +53,7 @@ This approach has a significant increase in the use of spaces. If we do not want
   <li> It took my program roughly 2 seconds to run the fifth test with 10 million 
       requests.
   </li>
+  </ul>
+
+## Refinement if I had more time:
+I would like to dig deeper into how could I use less space to achieve the same goals. Currently each port in each port range are used as the key of a map, which costs lots of space.
