@@ -13,7 +13,26 @@ So far, for each direction/protocal entries, and for each possible port, we have
 #### step 4: Summary and Furthur thought
 Thus, the final data structure will look like this in Java: 
 <code>
-  // where string represents the protocal/direction pair; integer represents port,
-  // and ArrayList<long[]> represents the ip address ranges.
   HashMap<String,HashMap<Integer,ArrayList<long[]>>> map
 </code>
+where string represents the protocal/direction pair; integer represents port,
+and ArrayList<long[]> represents the ip address ranges.
+  
+This approach has a significant increase in the use of spaces. If we do not want this trade off,we could truncate step 2 and 3 and linear search all the port/ip pairs associated with it. This way the runtime is moderately reduced without expense of using more space.
+
+## Testing of my Program
+#### I tested my program in the following 5 cases
+<ol>
+  <li>testing the program against the example test cases</li>
+  <li>testing the program with changing port ranges while other datas are fixed.<br/>
+    Aiming to test the functionality of mapping ports to others.
+  </li>
+  <li>testing the program with changing ip ranges while other datas are fixed.
+    <br/>Aiming to test the functionality of merging intervals and binary search.
+  </li>
+  <li>testing the program with full span of ports(0-65536). <br/>
+    Aiming to test the performance of the program when lots of space are used.
+  </li>
+  <li> testing the program with 10 million requests. <br/>
+    Aiming to test the running time of the program under long input dataset.</li>
+</ol>
