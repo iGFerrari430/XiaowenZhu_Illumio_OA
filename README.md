@@ -17,7 +17,9 @@ Thus, the final data structure will look like this in Java:
 </code>
 where string represents the protocal/direction pair; integer represents port,
 and ArrayList<long[]> represents the ip address ranges.
-  
+
+This approach could reduce the worst case runtime to <code>O(logn)</code> where n is the number of rules in the database. 
+
 This approach has a significant increase in the use of spaces. If we do not want this trade off,we could truncate step 2 and 3 and linear search all the port/ip pairs associated with it. This way the runtime is moderately reduced without expense of using more space.
 
 ## Testing of my Program
@@ -43,3 +45,6 @@ This approach has a significant increase in the use of spaces. If we do not want
   <li> It took my program roughly 2 seconds to run the fifth test with 10 million 
       requests.
   </li>
+
+## Refinement if I had more time:
+I would like to dig deeper into how could I use less space to achieve the same goals. Currently each port in each port range are used as the key of a map, which costs lots of space.
