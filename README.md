@@ -1,4 +1,12 @@
 # XiaowenZhu_Illumio_OA
+## Configuration of the project
+  I used Java to program this assignment.<br/>
+  It could be opened in either eclipse or IntelliJ. The file's directory is src/Firewall.<br/>
+  The method could be invoked using: 
+  <code>
+    Firewall wall = new Firewall(inputFile);
+    wall.accept_packet(direction,protocal,port,IPadress) // returns a boolean
+  </code>
 ## My intuitions and Algorithm
 After seeing the problem,I paid special attention to one major requirement: After the input dataset has been loaded, we should be able to deal with subsequent large loads of requests fairly quickly, without major delay.<br/> Scanning through each rule is, obviously, not very ideal. There must be some methods of organizing the data better in expense of the memory. <br/><br/>Thus, my optimization begins here.<br/><br/>
 #### step 1 : dealing with "direction"/"protocal" entires
