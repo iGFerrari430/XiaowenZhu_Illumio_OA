@@ -5,7 +5,7 @@
   <li>My intuitions and Algorithm</li>
   <li>Testing of my Program</li>
   <li>Refinement if I had more time:</li>
-  <li>My Team Interest</li>
+  <li><strong>My Team Interest</strong></li>
     
   </ol>
 
