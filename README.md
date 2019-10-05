@@ -23,7 +23,7 @@ After seeing the problem,I paid special attention to one major requirement: Afte
 First, I noticed that there are only 4 possibilites of the first 2 entries of one rule,"direction" and "protocal", so we could use a HashMap that maps each possiblity to its associated data. This could, in average, decrease the runtime by 4 times without compensating any space. However, in terms of big O notation of runtime, nothing has changed. The searching time is still O(n).<br/>
 
 #### step 2 : dealing with ports
-Then, I realize that one of the other key could be used to map to other datas, so that the runtime complexity could be further reduced. However, ip address is not a good candidate, since the range is way too large. the port data on the other hand, could be used to be the key of another map, which maps to the list of mapped ip addresses. So the process is: given the range, add the associated ip address range to each number inside that port range.
+Then, I realize that one of the other entries(ip address/port) could be used to map to other datas, so that the runtime complexity could be further reduced. However, ip address is not a good candidate, since the range is way too large. the port data on the other hand, could be used to be the key of another map, which maps to the list of mapped ip addresses. So the process is: given the range of port, add the associated ip address range to each number inside that port range.
 
 #### step 3: dealing with ip addresses
 So far, for each direction/protocal entries, and for each possible port, we have got a list of ip address ranges. We could then sort and merge these ip addresses, so that binary search could be used when searching whether ip address is in one of the ranges.
