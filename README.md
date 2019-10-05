@@ -4,7 +4,7 @@
   It could be opened in either eclipse or IntelliJ. The file's directory is src/Firewall.<br/>
   The method could be invoked using: <br/>
   <code>
-    Firewall wall = new Firewall(inputFile);
+    Firewall wall = new Firewall(inputFile);<br/>
     wall.accept_packet(direction,protocal,port,IPadress) // returns a boolean
   </code>
 ## My intuitions and Algorithm
