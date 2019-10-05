@@ -1,11 +1,11 @@
 # XiaowenZhu_Illumio_OA
 ### Directory
   <ol>
-  <li>1.Configuration of the project</li>
-  <li>2.My intuitions and Algorithm</li>
-  <li>3.Testing of my Program</li>
-  <li>4.Refinement if I had more time:</li>
-  <li>5.My Team Interest</li>
+  <li>Configuration of the project</li>
+  <li>My intuitions and Algorithm</li>
+  <li>Testing of my Program</li>
+  <li>Refinement if I had more time:</li>
+  <li>My Team Interest</li>
     
   </ol>
 
