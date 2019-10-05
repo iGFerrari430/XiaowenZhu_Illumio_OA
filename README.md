@@ -1,9 +1,18 @@
 # XiaowenZhu_Illumio_OA
+### Directory
+  <ol>
+  <li>1.Configuration of the project</li>
+  <li>2.My intuitions and Algorithm</li>
+  <li>3.Testing of my Program</li>
+  <li>4.Refinement if I had more time:</li>
+  <li>5.My Team Interest</li>
+    
+  </ol>
 ## Configuration of the project
   I used Java to program this assignment.<br/>
   It could be opened in either eclipse or IntelliJ. The file's directory is src/Firewall.<br/>
   The method could be invoked using: <br/>
- ```
+```
     Firewall wall = new Firewall(inputFile);
     wall.accept_packet(direction,protocal,port,IPadress) // returns a boolean
 ```
@@ -57,3 +66,6 @@ This approach has a significant increase in the use of spaces. If we do not want
 
 ## Refinement if I had more time:
 I would like to dig deeper into how could I use less space to achieve the same goals. Currently each port in each port range are used as the key of a map, which costs lots of space.
+
+## My Team Interest
+After reading through the information of all teams, I am most interested in joining the policy team. However, I am glad to join data team as well!
